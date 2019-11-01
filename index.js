@@ -10,6 +10,6 @@ express()
   .get('/', (req, res) => res.render('pages/index'))
   .get('/cool', 
     (req, res) =>
-        res.render( cool() )
+        res.send( cool() )
   )
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
