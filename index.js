@@ -27,7 +27,7 @@ express()
             try {
                 const cliente = await pool.connect()
                 const resultados = await cliente.query('SELECT * FROM test_table')
-                const resultado = { 'results':(resultados) ? resultados.rows : null }
+                const resultado = { 'listado':(resultados) ? resultados.rows : null }
                 res.render( 'pages/db', resultado )
                 cliente.release()
                 
